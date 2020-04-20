@@ -1,6 +1,6 @@
 <template>
     <div>
-        <p>Counter is : {{ doubleCounter }}</p>
+        <p>Another Counter is : {{ doubleCounter }}</p>
         <p>Number of Clicks : {{ stringCounter }}</p>
     </div>
 </template>
