@@ -5,7 +5,11 @@
 <script>
     export default {
         name: "Result",
-        props: ['counter']
+        computed: {
+            counter() {
+                return this.$store.state.counter;
+            }
+        }
     }
 </script>
 
