@@ -4,7 +4,7 @@
 
 <script>
     export default {
-        name: "Result",
+        name: "AnotherResult",
         computed: {
             counter() {
                 return this.$store.state.counter * 2;
