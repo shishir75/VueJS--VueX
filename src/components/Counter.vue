@@ -6,12 +6,12 @@
 </template>
 
 <script>
-    import { mapMutations } from 'vuex';
+    import { mapActions } from 'vuex';
 
     export default {
         name: "Counter",
         methods: {
-            ...mapMutations([
+            ...mapActions([
                     'increment',
                     'decrement'
             ]),
