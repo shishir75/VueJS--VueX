@@ -1,7 +1,7 @@
 <template>
     <div class="mt-2">
-        <button class="btn btn-primary" @click="increment">Increment</button>
-        <button class="btn btn-danger ml-3" @click="decrement">Decrement</button>
+        <button class="btn btn-primary" @click="asyncIncrement({ by: 50, duration: 500})">Increment</button>
+        <button class="btn btn-danger ml-3" @click="asyncDecrement({ by: 50, duration: 500})">Decrement</button>
     </div>
 </template>
 
@@ -12,8 +12,8 @@
         name: "AnotherCounter",
         methods: {
             ...mapActions([
-                'increment',
-                'decrement'
+                'asyncIncrement',
+                'asyncDecrement'
             ]),
         }
     }
