@@ -8,6 +8,9 @@
         <hr>
         <app-counter></app-counter>
         <app-another-counter></app-another-counter>
+        <hr>
+        <input type="text" v-model="value">
+        <p class="mt-2">Result: {{ value }}</p>
       </div>
     </div>
   </div>
@@ -21,6 +24,17 @@ import AnotherResult from "./components/AnotherResult";
 
 export default {
   name: 'App',
+  computed: {
+    value: {
+      get() {
+        return this.$store.getters.value;
+      },
+      set(value) {
+        this.$store.dispatch('updatedValue', value);
+      }
+
+    }
+  },
   components: {
     appCounter: Counter,
     appAnotherCounter: AnotherCounter,
